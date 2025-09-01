@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cosmic Firefly Sky</title>
+  <style>
+    body {
+      background: linear-gradient(270deg, #0b0c10, #1a1f40, #3b0a45, #7a1f5c, #1f4068);
+      background-size: 1000% 1000%;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      animation: skyShift 60s ease infinite;
+    }
+
+    @keyframes skyShift {
+      0%   { background-position: 0% 50%; }
+      25%  { background-position: 25% 50%; }
+      50%  { background-position: 50% 50%; }
+      75%  { background-position: 75% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    /* Star core */
+    .star {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 0 10px 4px rgba(255,255,255,0.8);
+      animation: twinkle 2s infinite ease-in-out,
+                 rainbowGlow 6s linear infinite;
+    }
+
+    /* Glow halo */
+    .star::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 26px;
+      height: 26px;
+      background: radial-gradient(circle, currentColor 0%, transparent 70%);
+      border-radius: 50%;
+      opacity: 0.6;
+    }
+
+    /* Twinkle */
+    @keyframes twinkle {
+      0%, 100% { transform: scale(0.7); opacity: 0.5; }
+      50%      { transform: scale(1.5); opacity: 1; }
+    }
+
+    /* Rainbow glow */
+    @keyframes rainbowGlow {
+      0%   { color: red;    background: red;    box-shadow: 0 0 12px red; }
+      16%  { color: orange; background: orange; box-shadow: 0 0 12px orange; }
+      33%  { color: yellow; background: yellow; box-shadow: 0 0 12px yellow; }
+      50%  { color: green;  background: green;  box-shadow: 0 0 12px green; }
+      66%  { color: blue;   background: blue;   box-shadow: 0 0 12px blue; }
+      83%  { color: indigo; background: indigo; box-shadow: 0 0 12px indigo; }
+      100% { color: violet; background: violet; box-shadow: 0 0 12px violet; }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    function createStar() {
+      const star = document.createElement("div");
+      star.classList.add("star");
+
+      // random placement
+      star.style.top = `${Math.random() * window.innerHeight}px`;
+      star.style.left = `${Math.random() * window.innerWidth}px`;
+
+      document.body.appendChild(star);
+
+      setTimeout(() => star.remove(), 20000); // remove after 20s
+    }
+
+    setInterval(createStar, 800); // new star every 0.8s
+  </script>
+</body>
+</html>
