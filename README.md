@@ -9,7 +9,7 @@ The main vibe is a magical night sky ✨ — glowing stars, rainbow sparkles, an
 ## 🚀 Features so far
 - Flowing gradient background that shifts colors  
 - Hover-glowing moon image  
-- Animated twinkling stars (white + rainbow) 
+- Animated twinkling stars (rainbow) 
 
 ---
 
