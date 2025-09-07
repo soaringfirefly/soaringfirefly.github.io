@@ -8,7 +8,7 @@ The main vibe is a magical night sky ✨ — glowing stars, rainbow sparkles, an
 
 ## 🚀 Features so far
 - Flowing gradient background that shifts colors  
-- Hover-glowing moon image  
+- Hover-glowing image  
 - Animated twinkling stars (rainbow) 
 
 ---
@@ -16,7 +16,7 @@ The main vibe is a magical night sky ✨ — glowing stars, rainbow sparkles, an
 ## 🎯 Aim
 - Post creative content
 - Add more vibrant star animations  
-- Try linking hidden “portals” on the moon to secret pages  
+- Try linking hidden “portals” on the moon to secret pages  (LOL)
 
 ---
 
